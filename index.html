@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Audio Player</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="upper-class"> <div><img src="player.png"> <h1>Music player</h1></div>
+        <img src="menu.png"> </div>
+    <div class="outer_class">
+        <div class="player">
+            <div class="img-clas">
+                <img src="music.png" class="box-img">
+                <h2 id="songName">Nesamaguren</h2> 
+            </div>
+            <div class="play-range-class">
+                <input type="range" name="" min="0" value="0" id="seekSlider">
+            </div>
+            <div class="control">
+                <button onclick="repeatChange()"><img src="r1.png" id="repeat"></button>
+                <button onclick="preSong()"><img src="pre.png" id="pre-img"></button>
+                <button onclick="togglePlayPause()"><img src="play2.png" class="play" id="image"></button>
+                <button onclick="nextSong()"><img src="next.png"></button>
+                <button onclick="toggleLike()"><img src="l.png" id="like"></button>
+            </div>
+            <audio id="playerControl">
+                <source src="0.mp3" type="audio/mpeg" id="sourceSong">
+            </audio>
+            <div class="Volume-class"> <button onclick ="changeVolume()" id="volumeControl"> <img src="v.png" id="volumeImage"></button>
+                <input type="range" id="volume" name="volume" min="0" max="1" step="0.01" value="1" onchange="ChangeVolume(this.value)">
+            </div>
+        </div>
+        <div class="player-list">
+            <h1 class="PlayListHead">Playlist</h1>
+            <button onclick="changeCurrentSonf(0)"> <img src="n.png"><h1>Nesamaguren</h1></button>
+            <button  onclick="changeCurrentSonf(1)"> <img src="n.png"><h1>Naanum Rowdy Dhaan</h1></button>
+            <button  onclick="changeCurrentSonf(2)"> <img src="n.png"><h1>Ice Katti Kuruvi</h1></button>
+            <button onclick="changeCurrentSonf(3)">  <img src="n.png"><h1>Kadhale Kadhale</h1></button>
+            <button onclick="changeCurrentSonf(4)"> <img src="n.png"><h1>Oxygen</h1></button>
+            <button onclick="changeCurrentSonf(5)"> <img src="n.png"><h1>Yaar Azhaippadhu</h1></button>
+            <button onclick="changeCurrentSonf(6)" >  <img src="n.png"><h1>Yaen Ennai Pirindhaai</h1></button>
+            <button onclick="changeCurrentSonf(7)"> <img src="n.png"><h1>Yennai Maatrum Kadhale</h1></button>
+            <button onclick="changeCurrentSonf(8)"> <img src="n.png"><h1>Pirai Thedum</h1></button>
+            <button onclick="changeCurrentSonf(9)"> <img src="n.png"><h1>Po Urave</h1></button>
+            <button onclick="changeCurrentSonf(10)"> <img src="n.png"><h1>Naan Un</h1></button>
+            <button onclick="changeCurrentSonf(11)"> <img src="n.png"><h1>Venmathiye</h1></button>
+            <button onclick="changeCurrentSonf(12)"> <img src="n.png"><h1>Thean Kudika</h1></button>
+              <button onclick="changeCurrentSonf(13)"> <img src="n.png"><h1>Yaanji</h1></button>
+        </div>
+    </div>
+
+    <script>
+        var imageElement = document.getElementById('image');
+        var audioPlayer = document.getElementById('playerControl');
+        var box = document.querySelector('.box-img');
+        var songSource = document.getElementById('sourceSong');
+        var unlike = false;
+        var repeat = false;
+        var songNameElement = document.getElementById('songName'); // corrected variable name
+        box.style.animationPlayState = 'paused';
+        var defaultVolume = false;
+        var currentVolume = 0;
+
+        const songs = ['0.mp3', '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3', '6.mp3', '7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3'];
+        const songsName = ['Nesamaguren', 'Naanum Rowdy Dhaan', 'Ice Katti Kuruvi', 'Kadhale Kadhale', 'Oxygen', 'Yaar Azhaippadhu', 'Yaen Ennai Pirindhaai', 'Yennai Maatrum Kadhale','Pirai Thedum','Po Urave','Naan Un','Venmathiye','Thean Kudika','Yaanji'];
+        var songIndex = 0; // renamed to songIndex for clarity
+
+        // Function to toggle play/pause and update UI
+        function togglePlayPause() {
+            if (audioPlayer.paused) {
+                playAudio();
+            } else {
+                pauseAudio();
+            }
+        }
+
+        // Function to play audio
+        function playAudio() {
+            audioPlayer.play();
+            imageElement.src = 'pause1.png';
+            box.style.animationPlayState = 'running';
+        }
+
+        // Function to pause audio
+        function pauseAudio() {
+            audioPlayer.pause();
+            imageElement.src = 'play2.png';
+            box.style.animationPlayState = 'paused';
+        }
+
+        // Function to toggle like button
+        function toggleLike() {
+            var likeElement = document.getElementById('like');
+            if (!unlike) {
+                likeElement.src = 'l1.png';
+                unlike = true;
+            } else {
+                likeElement.src = 'l.png';
+                unlike = false;
+            }
+        }
+
+        // Function to toggle repeat button
+        function repeatChange() {
+            var repeatElement = document.getElementById('repeat');
+            if (!repeat) {
+                repeatElement.src = 'r2.png';
+                repeat = true;
+            } else {
+                repeatElement.src = 'r1.png';
+                repeat = false;
+            }
+        }
+
+        // Function to play next song
+        function nextSong() {
+            if (songIndex < songs.length - 1) {
+                songIndex++;
+            } else {
+                songIndex = 0; // Loop back to the first song
+            }
+            loadAndPlaySong();
+        }
+
+        // Function to play previous song
+        function preSong() {
+            if (songIndex > 0) {
+                songIndex--;
+            } else {
+                songIndex = songs.length - 1; // Wrap around to the last song
+            }
+            loadAndPlaySong();
+        }
+
+        // Function to load and play the current song
+        function loadAndPlaySong() {
+            songSource.src = songs[songIndex];
+            audioPlayer.load();
+            playAudio();
+            updateSongName();
+        }
+
+        // Function to update the displayed song name
+        function updateSongName() {
+            songNameElement.textContent = songsName[songIndex];
+        }
+
+        // Event listener for when metadata is loaded
+        audioPlayer.addEventListener('loadedmetadata', function() {
+            seekSlider.max = audioPlayer.duration;
+        });
+
+        // Event listener for time update
+        audioPlayer.addEventListener('timeupdate', function() {
+            seekSlider.value = audioPlayer.currentTime;
+            checkEndOfTrack();
+        });
+
+        // Event listener for seek slider input
+        seekSlider.addEventListener('input', function() {
+            audioPlayer.currentTime = seekSlider.value;
+            checkEndOfTrack();
+        });
+
+        // Function to check end of track
+        function checkEndOfTrack() {
+            if (audioPlayer.currentTime >= audioPlayer.duration) {
+                pauseAudio();
+                
+
+            }
+        }
+        function ChangeVolume(val)
+        {    if(defaultVolume)
+        {
+            audioPlayer.volume = 0;
+        }
+        else{
+            audioPlayer.volume = val;
+        }
+        }
+        
+        function changeVolume(){
+            var muteVolume = document.getElementById('volumeImage');
+            if(!defaultVolume)
+            { muteVolume.src ='m.png';
+               defaultVolume = true;
+               audioPlayer.volume = 0;
+            }
+            else{ 
+                muteVolume.src = 'v.png';
+                defaultVolume = false;
+                audioPlayer.volume = 0.6;
+
+            }
+        }
+        function changeCurrentSonf(valu){
+            songSource.src = songs[valu];
+            songIndex = valu;
+            audioPlayer.load();
+            playAudio();
+            updateSongName();
+        }
+    </script>
+</body>
+</html>
