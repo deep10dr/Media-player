@@ -192,6 +192,9 @@ margin: 40px 0;
   height: 40px;
   justify-content: space-between;
 }
+.Volume-class input,button:hover{
+ cursor: pointer;
+}
 .Volume-class-inner{
 	display: flex;
 	flex-direction:row;
@@ -202,8 +205,10 @@ margin: 40px 0;
 	margin-left: 5px;
 }
 .auto-play-class{
-	width: 80px;
-	margin-left: 20px;
+	width: 130px;
+  
+	display: flex;
+	flex-direction: row;
 }
 .auto-play-class button{
 	background: transparent;
@@ -211,6 +216,9 @@ margin: 40px 0;
 }
 #auto_play_image{
 	height: 50px;
+}
+#random-image{
+	height: 30px;
 }
 #volume{
 		-webkit-appearance: none;
