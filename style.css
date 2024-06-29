@@ -186,11 +186,31 @@ margin: 40px 0;
 .Volume-class{
 	display: flex;
 	flex-direction:row;
-	gap: 5px;
 	align-items: center;
 	padding: 5px;
-	margin-right: 140px;
+	width: 95%;
   height: 40px;
+  justify-content: space-between;
+}
+.Volume-class-inner{
+	display: flex;
+	flex-direction:row;
+	gap: 5px;
+	height: 40px;
+	align-items: center;
+	padding: 5px;
+	margin-left: 5px;
+}
+.auto-play-class{
+	width: 80px;
+	margin-left: 20px;
+}
+.auto-play-class button{
+	background: transparent;
+	margin-left: 10px;
+}
+#auto_play_image{
+	height: 50px;
 }
 #volume{
 		-webkit-appearance: none;
@@ -271,6 +291,7 @@ border-radius: 5px;
 transition: 0.2s border-bottom ;
 }
 @media screen and (max-width:600px){
+	
 	*{ border: 0px;
 		 margin: 0px;
 
@@ -286,6 +307,7 @@ transition: 0.2s border-bottom ;
 	padding: 10px;
 	justify-content: space-between;
 	width: 100%;
+	margin-top: 28px;
 }
   .upper-class img{
 	height: 40px;
