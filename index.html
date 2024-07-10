@@ -71,6 +71,10 @@
             <button onclick="changeCurrentSonf(23)"> <img src="n.png"><h1>Kuru Kuru</h1></button>
             <button onclick="changeCurrentSonf(24)"> <img src="n.png"><h1>Aasa Kooda</h1></button>
             <button onclick="changeCurrentSonf(25)"> <img src="n.png"><h1>Nenjin Ezhuth</h1></button>
+             <button onclick="changeCurrentSonf(26)"> <img src="n.png"><h1>Indru-Netru-Naalai</h1></button>
+              <button onclick="changeCurrentSonf(27)"> <img src="n.png"><h1>Aval</h1></button>
+              <button onclick="changeCurrentSonf(28)"> <img src="n.png"><h1>Naan Aval IIlai</h1></button>
+              <button onclick="changeCurrentSonf(29)"> <img src="n.png"><h1> Anbae Peranbae</h1></button>
         </div>
     </div>
 
@@ -88,12 +92,11 @@
         var autoplaySong = document.getElementById('auto_play_image');
         var autoplayclass = false;
         var randomClassimage = false;
-
-       const songs = ['0.mp3', '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3', '6.mp3', '7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3','14.mp3','15.mp3','16.mp3','17.mp3','18.mp3','19.mp3','20.mp3','21.mp3','22.mp3','23.mp3','24.mp3','25.mp3'];
-        const songsName = ['Nesamaguren', 'Naanum Rowdy Dhaan', 'Ice Katti Kuruvi', 'Kadhale Kadhale', 'Oxygen', 'Yaar Azhaippadhu', 'Yaen Ennai Pirindhaai', 'Yennai Maatrum Kadhale','Pirai Thedum','Po Urave','Naan Un','Venmathiye','Thean Kudika','Yaanji','Maruvaarthai','Kadhaippoma','Uyire Un Uyirena','Kannamma','Oh Oh (From "Thangamagan")','Hey Penne','Railin Oligal','Nee Kavithaigala','Kangal Edho','Kuru Kuru','Aasa Kooda','Nenjin Ezhuth'];
-        var likeCount = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
+const songs = ['0.mp3', '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3', '6.mp3', '7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3','14.mp3','15.mp3','16.mp3','17.mp3','18.mp3','19.mp3','20.mp3','21.mp3','22.mp3','23.mp3','24.mp3','25.mp3','26.mp3','27.mp3','28.mp3','29.mp3'];
+        const songsName = ['Nesamaguren', 'Naanum Rowdy Dhaan', 'Ice Katti Kuruvi', 'Kadhale Kadhale', 'Oxygen', 'Yaar Azhaippadhu', 'Yaen Ennai Pirindhaai', 'Yennai Maatrum Kadhale','Pirai Thedum','Po Urave','Naan Un','Venmathiye','Thean Kudika','Yaanji','Maruvaarthai','Kadhaippoma','Uyire Un Uyirena','Kannamma','Oh Oh (From "Thangamagan")','Hey Penne','Railin Oligal','Nee Kavithaigala','Kangal Edho','Kuru Kuru','Aasa Kooda','Nenjin Ezhuth','Indru-Netru-Naalai','Aval','Naan Aval IIlai',' Anbae Peranbae'];
+        var likeCount = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
         var songIndex = 0; // renamed to songIndex for clarity
-
+      
         // Function to toggle play/pause and update UI
         function togglePlayPause() {
             if (audioPlayer.paused) {
