@@ -23,7 +23,7 @@
                 <button onclick="repeatChange()"><img src="r1.png" id="repeat"></button>
                 <button onclick="preSong()"><img src="pre.png" id="pre-img"></button>
                 <button onclick="togglePlayPause()"><img src="play2.png" class="play" id="image"></button>
-                <button onclick="nextSong()"><img src="next.png"></button>
+                <button onclick="nextSong()"><img src="next.png" id="next-img"></button>
                 <button onclick="toggleLike()"><img src="l.png" id="like"></button>
             </div>
             <audio id="playerControl">
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="player-list">
-            <h1 class="PlayListHead">Playlist</h1>
+         <h1 class="PlayListHead">Playlist</h1>
             <button onclick="changeCurrentSonf(0)"> <img src="n.png"><h1>Nesamaguren</h1></button>
             <button  onclick="changeCurrentSonf(1)"> <img src="n.png"><h1>Naanum Rowdy Dhaan</h1></button>
             <button  onclick="changeCurrentSonf(2)"> <img src="n.png"><h1>Ice Katti Kuruvi</h1></button>
@@ -75,6 +75,10 @@
               <button onclick="changeCurrentSonf(27)"> <img src="n.png"><h1>Aval</h1></button>
               <button onclick="changeCurrentSonf(28)"> <img src="n.png"><h1>Naan Aval IIlai</h1></button>
               <button onclick="changeCurrentSonf(29)"> <img src="n.png"><h1> Anbae Peranbae</h1></button>
+                <button onclick="changeCurrentSonf(30)"> <img src="n.png"><h1>High on Love </h1></button>
+          <button onclick="changeCurrentSonf(31)"> <img src="n.png"><h1>Nee Paartha Vizhiga</h1></button>
+
+
         </div>
     </div>
 
@@ -92,11 +96,13 @@
         var autoplaySong = document.getElementById('auto_play_image');
         var autoplayclass = false;
         var randomClassimage = false;
-const songs = ['0.mp3', '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3', '6.mp3', '7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3','14.mp3','15.mp3','16.mp3','17.mp3','18.mp3','19.mp3','20.mp3','21.mp3','22.mp3','23.mp3','24.mp3','25.mp3','26.mp3','27.mp3','28.mp3','29.mp3'];
-        const songsName = ['Nesamaguren', 'Naanum Rowdy Dhaan', 'Ice Katti Kuruvi', 'Kadhale Kadhale', 'Oxygen', 'Yaar Azhaippadhu', 'Yaen Ennai Pirindhaai', 'Yennai Maatrum Kadhale','Pirai Thedum','Po Urave','Naan Un','Venmathiye','Thean Kudika','Yaanji','Maruvaarthai','Kadhaippoma','Uyire Un Uyirena','Kannamma','Oh Oh (From "Thangamagan")','Hey Penne','Railin Oligal','Nee Kavithaigala','Kangal Edho','Kuru Kuru','Aasa Kooda','Nenjin Ezhuth','Indru-Netru-Naalai','Aval','Naan Aval IIlai',' Anbae Peranbae'];
+        var nextImage = document.getElementById('next-img'); // Add quotes around 'next-img'
+        var preImage = document.getElementById('pre-img');
+        const songs = ['0.mp3', '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3', '6.mp3', '7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3','14.mp3','15.mp3','16.mp3','17.mp3','18.mp3','19.mp3','20.mp3','21.mp3','22.mp3','23.mp3','24.mp3','25.mp3','26.mp3','27.mp3','28.mp3','29.mp3','30.mp3','31.mp3'];
+        const songsName = ['Nesamaguren', 'Naanum Rowdy Dhaan', 'Ice Katti Kuruvi', 'Kadhale Kadhale', 'Oxygen', 'Yaar Azhaippadhu', 'Yaen Ennai Pirindhaai', 'Yennai Maatrum Kadhale','Pirai Thedum','Po Urave','Naan Un','Venmathiye','Thean Kudika','Yaanji','Maruvaarthai','Kadhaippoma','Uyire Un Uyirena','Kannamma','Oh Oh (From "Thangamagan")','Hey Penne','Railin Oligal','Nee Kavithaigala','Kangal Edho','Kuru Kuru','Aasa Kooda','Nenjin Ezhuth','Indru-Netru-Naalai','Aval','Naan Aval IIlai',' Anbae Peranbae','High on Love','Nee Paartha Vizhigal'];
         var likeCount = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
         var songIndex = 0; // renamed to songIndex for clarity
-      
+
         // Function to toggle play/pause and update UI
         function togglePlayPause() {
             if (audioPlayer.paused) {
@@ -305,6 +311,22 @@ function randomSongplay() {
     }
 
 }
+// Corrected JavaScript code
+
+nextImage.addEventListener('mouseover', () => {
+    nextImage.src = 'next1.png'; // Change src attribute on mouseover
+});
+nextImage.addEventListener('mouseout', () => {
+    nextImage.src = 'next.png'; // Change src attribute on mouseover
+});
+preImage.addEventListener('mouseover', () => {
+    preImage.src = 'pre1.png'; // Change src attribute on mouseover
+});
+preImage.addEventListener('mouseout', () => {
+    preImage.src = 'pre.png'; // Change src attribute on mouseover
+});
+
+
 </script>
 </body>
 </html>
