@@ -44,53 +44,84 @@
             </div>
         </div>
         <div class="player-list">
-         <h1 class="PlayListHead">Playlist</h1>
-            <button onclick="changeCurrentSonf(0)"> <img src="n.png"><h1>Nesamaguren</h1></button>
-            <button  onclick="changeCurrentSonf(1)"> <img src="n.png"><h1>Naanum Rowdy Dhaan</h1></button>
-            <button  onclick="changeCurrentSonf(2)"> <img src="n.png"><h1>Ice Katti Kuruvi</h1></button>
-            <button onclick="changeCurrentSonf(3)">  <img src="n.png"><h1>Kadhale Kadhale</h1></button>
-            <button onclick="changeCurrentSonf(4)"> <img src="n.png"><h1>Oxygen</h1></button>
-            <button onclick="changeCurrentSonf(5)"> <img src="n.png"><h1>Yaar Azhaippadhu</h1></button>
-            <button onclick="changeCurrentSonf(6)" >  <img src="n.png"><h1>Yaen Ennai Pirindhaai</h1></button>
-            <button onclick="changeCurrentSonf(7)"> <img src="n.png"><h1>Yennai Maatrum Kadhale</h1></button>
-            <button onclick="changeCurrentSonf(8)"> <img src="n.png"><h1>Pirai Thedum</h1></button>
-            <button onclick="changeCurrentSonf(9)"> <img src="n.png"><h1>Po Urave</h1></button>
-            <button onclick="changeCurrentSonf(10)"> <img src="n.png"><h1>Naan Un</h1></button>
-            <button onclick="changeCurrentSonf(11)"> <img src="n.png"><h1>Venmathiye</h1></button>
-            <button onclick="changeCurrentSonf(12)"> <img src="n.png"><h1>Thean Kudika</h1></button>
-            <button onclick="changeCurrentSonf(13)"> <img src="n.png"><h1>Yaanji</h1></button>
-            <button onclick="changeCurrentSonf(14)"> <img src="n.png"><h1>Maruvaarthai</h1></button>
-            <button onclick="changeCurrentSonf(15)"> <img src="n.png"><h1>Kadhaippoma</h1></button>
-            <button onclick="changeCurrentSonf(16)"> <img src="n.png"><h1>Uyire Un Uyirena</h1></button>
-            <button onclick="changeCurrentSonf(17)"> <img src="n.png"><h1>Kannamma</h1></button>
-            <button onclick="changeCurrentSonf(18)"> <img src="n.png"><h1>Oh Oh (From "Thangamagan")</h1></button>
-            <button onclick="changeCurrentSonf(19)"> <img src="n.png"><h1>Hey Penne</h1></button>
-            <button onclick="changeCurrentSonf(20)"> <img src="n.png"><h1>Railin Oligal</h1></button>
-            <button onclick="changeCurrentSonf(21)"> <img src="n.png"><h1>Nee Kavithaigala</h1></button>
-            <button onclick="changeCurrentSonf(22)"> <img src="n.png"><h1>Kangal Edho</h1></button>
-            <button onclick="changeCurrentSonf(23)"> <img src="n.png"><h1>Kuru Kuru</h1></button>
-            <button onclick="changeCurrentSonf(24)"> <img src="n.png"><h1>Aasa Kooda</h1></button>
-            <button onclick="changeCurrentSonf(25)"> <img src="n.png"><h1>Nenjin Ezhuth</h1></button>
-             <button onclick="changeCurrentSonf(26)"> <img src="n.png"><h1>Indru-Netru-Naalai</h1></button>
-              <button onclick="changeCurrentSonf(27)"> <img src="n.png"><h1>Aval</h1></button>
-              <button onclick="changeCurrentSonf(28)"> <img src="n.png"><h1>Naan Aval IIlai</h1></button>
-              <button onclick="changeCurrentSonf(29)"> <img src="n.png"><h1> Anbae Peranbae</h1></button>
-                <button onclick="changeCurrentSonf(30)"> <img src="n.png"><h1>High on Love </h1></button>
-          <button onclick="changeCurrentSonf(31)"> <img src="n.png"><h1>Nee Paartha Vizhiga</h1></button>
+            <div class="PlayerHeadClass" id="PlayerHeadClass">
+                <div onclick="listChanger(0)" class=""> <h1 class="PlayListHead">Playlist</h1><img src="pl.png" id="play-list-change"> </div>
+                <div onclick="listChanger(497)" class=""> <h1 class="PlayListHead">Artist</h1><img src="artist.png" id="play-list-change"> </div>
+                <div onclick="listChanger(998)" class=""> <h1 class="PlayListHead">Album</h1><img src="album.png" id="play-list-change"> </div>
+            </div>
+            <div   class="player-list-items-container" id="player-list-items-container">
+                <div class="inner-player-list">
+                  <div class="player-list-items"  id="player-list-items">
+                    <button onclick="changeCurrentSonf(0)"> <img src="n.png"><h1>Nesamaguren</h1></button>
+                    <button  onclick="changeCurrentSonf(1)"> <img src="n.png"><h1>Naanum Rowdy Dhaan</h1></button>
+                    <button  onclick="changeCurrentSonf(2)"> <img src="n.png"><h1>Ice Katti Kuruvi</h1></button>
+                    <button onclick="changeCurrentSonf(3)">  <img src="n.png"><h1>Kadhale Kadhale</h1></button>
+                    <button onclick="changeCurrentSonf(4)"> <img src="n.png"><h1>Oxygen</h1></button>
+                    <button onclick="changeCurrentSonf(5)"> <img src="n.png"><h1>Yaar Azhaippadhu</h1></button>
+                    <button onclick="changeCurrentSonf(6)" >  <img src="n.png"><h1>Yaen Ennai Pirindhaai</h1></button>
+                    <button onclick="changeCurrentSonf(7)"> <img src="n.png"><h1>Yennai Maatrum Kadhale</h1></button>
+                    <button onclick="changeCurrentSonf(8)"> <img src="n.png"><h1>Pirai Thedum</h1></button>
+                    <button onclick="changeCurrentSonf(9)"> <img src="n.png"><h1>Po Urave</h1></button>
+                    <button onclick="changeCurrentSonf(10)"> <img src="n.png"><h1>Naan Un</h1></button>
+                    <button onclick="changeCurrentSonf(11)"> <img src="n.png"><h1>Venmathiye</h1></button>
+                    <button onclick="changeCurrentSonf(12)"> <img src="n.png"><h1>Thean Kudika</h1></button>
+                    <button onclick="changeCurrentSonf(13)"> <img src="n.png"><h1>Yaanji</h1></button>
+                    <button onclick="changeCurrentSonf(14)"> <img src="n.png"><h1>Maruvaarthai</h1></button>
+                    <button onclick="changeCurrentSonf(15)"> <img src="n.png"><h1>Kadhaippoma</h1></button>
+                    <button onclick="changeCurrentSonf(16)"> <img src="n.png"><h1>Uyire Un Uyirena</h1></button>
+                    <button onclick="changeCurrentSonf(17)"> <img src="n.png"><h1>Kannamma</h1></button>
+                    <button onclick="changeCurrentSonf(18)"> <img src="n.png"><h1>Oh Oh (From "Thangamagan")</h1></button>
+                    <button onclick="changeCurrentSonf(19)"> <img src="n.png"><h1>Hey Penne</h1></button>
+                    <button onclick="changeCurrentSonf(20)"> <img src="n.png"><h1>Railin Oligal</h1></button>
+                    <button onclick="changeCurrentSonf(21)" value="21"> <img src="n.png"><h1>Nee Kavithaigala</h1></button>
+                    <button onclick="changeCurrentSonf(22)"> <img src="n.png"><h1>Kangal Edho</h1></button>
+                    <button onclick="changeCurrentSonf(23)"> <img src="n.png"><h1>Kuru Kuru</h1></button>
+                    <button onclick="changeCurrentSonf(24)"> <img src="n.png"><h1>Aasa Kooda</h1></button>
+                    <button onclick="changeCurrentSonf(25)"> <img src="n.png"><h1>Nenjin Ezhuth</h1></button>
+                    <button onclick="changeCurrentSonf(26)"> <img src="n.png"><h1>Indru-Netru-Naalai</h1></button>
+                    <button onclick="changeCurrentSonf(27)"> <img src="n.png"><h1>Aval</h1></button>
+                    <button onclick="changeCurrentSonf(28)"> <img src="n.png"><h1>Naan Aval IIlai</h1></button>
+                    <button onclick="changeCurrentSonf(29)"> <img src="n.png"><h1> Anbae Peranbae</h1></button>
+                    <button onclick="changeCurrentSonf(30)"> <img src="n.png"><h1>High on Love </h1></button>
+                    <button onclick="changeCurrentSonf(31)"> <img src="n.png"><h1>Nee Paartha Vizhiga</h1></button>
+                </div>
+                <div class="artist-class">
+                    <button> <img src="ar.jpg">A.R.Rahman <img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                    <button> <img src="ad.jfif" style="width: 53px; object-fit: cover;">Hiphop Tamizha <img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                    <button> <img src="hr.jfif" style="width: 55px; object-fit: cover;">Harris Jayaraj<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                    <button> <img src="ir.jfif">Ilayaraaja<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                    <button> <img src="gv.jfif">G. V. Prakash Kumar<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                    <button> <img src="a.jfif"  style="object-fit: fill;   width:50px; height: 50px;">Anirudh Ravichander<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                    <button> <img src="u1.jfif">Yuvan Shankar Raja
+                       <img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                       <button> <img src="st.jfif">Santhosh Narayanan <img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                       <button> <img src="va.jfif">Vijay Antony <img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                       <button> <img src="ssc.jfif" >Sam CS<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                       <button> <img src="msv.jfif" style="width:50px; object-fit:cover;">M. S. Viswanathan<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
+                       <button> <img src="ss.jfif">Sid Sriram<img src="h1.png" id="heartchange" onclick="heartchangeFunction()"></button>
 
-
+                   </div>
+                <div class="album-class">
+                </div>
+            </div>
         </div>
-    </div>
 
-    <script>
-        var imageElement = document.getElementById('image');
-        var audioPlayer = document.getElementById('playerControl');
-        var box = document.querySelector('.box-img');
-        var songSource = document.getElementById('sourceSong');
-        var unlike = false;
-        var repeat = false;
+
+
+    </div>
+</div>
+</div>
+
+<script>
+    var imageElement = document.getElementById('image');
+    var audioPlayer = document.getElementById('playerControl');
+    var box = document.querySelector('.box-img');
+    var songSource = document.getElementById('sourceSong');
+    var unlike = false;
+    var repeat = false;
+    var scrollItemPoint = document.getElementById('player-list-items-container');
         var songNameElement = document.getElementById('songName'); // corrected variable name
-         box.style.animationPlayState = 'paused';
+        box.style.animationPlayState = 'paused';
         var currentVolume = 0;
         var likeElement = document.getElementById('like');
         var autoplaySong = document.getElementById('auto_play_image');
@@ -98,6 +129,7 @@
         var randomClassimage = false;
         var nextImage = document.getElementById('next-img'); // Add quotes around 'next-img'
         var preImage = document.getElementById('pre-img');
+        var songActiveVar = document.getElementById('player-list-items').children;
         const songs = ['0.mp3', '1.mp3', '2.mp3', '3.mp3', '4.mp3', '5.mp3', '6.mp3', '7.mp3','8.mp3','9.mp3','10.mp3','11.mp3','12.mp3','13.mp3','14.mp3','15.mp3','16.mp3','17.mp3','18.mp3','19.mp3','20.mp3','21.mp3','22.mp3','23.mp3','24.mp3','25.mp3','26.mp3','27.mp3','28.mp3','29.mp3','30.mp3','31.mp3'];
         const songsName = ['Nesamaguren', 'Naanum Rowdy Dhaan', 'Ice Katti Kuruvi', 'Kadhale Kadhale', 'Oxygen', 'Yaar Azhaippadhu', 'Yaen Ennai Pirindhaai', 'Yennai Maatrum Kadhale','Pirai Thedum','Po Urave','Naan Un','Venmathiye','Thean Kudika','Yaanji','Maruvaarthai','Kadhaippoma','Uyire Un Uyirena','Kannamma','Oh Oh (From "Thangamagan")','Hey Penne','Railin Oligal','Nee Kavithaigala','Kangal Edho','Kuru Kuru','Aasa Kooda','Nenjin Ezhuth','Indru-Netru-Naalai','Aval','Naan Aval IIlai',' Anbae Peranbae','High on Love','Nee Paartha Vizhigal'];
         var likeCount = [false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false,false];
@@ -118,6 +150,7 @@
             imageElement.src = 'pause1.png';
             box.style.animationPlayState = 'running';
             updateSongName();
+            activeChanger(songIndex);
         }
 
         // Function to pause audio
@@ -236,36 +269,36 @@
                         playAudio();
                     }
                     else{
-                         pauseAudio();
-                    }
-                } 
+                     pauseAudio();
+                 }
+             } 
 
-            }
-        }
-        var defaultVolume = false;
-        function ChangeVolume(val)
-        {    if(defaultVolume)
-        {
-            audioPlayer.volume = 0;
-        }
-        else{
-            audioPlayer.volume = val;
-        }
-    }
-
-    function changeVolume(){
-        var muteVolume = document.getElementById('volumeImage');
-        if(!defaultVolume)
-            { muteVolume.src ='m.png';
-        defaultVolume = true;
+         }
+     }
+     var defaultVolume = false;
+     function ChangeVolume(val)
+     {    if(defaultVolume)
+     {
         audioPlayer.volume = 0;
     }
-    else{ 
-        muteVolume.src = 'v.png';
-        defaultVolume = false;
-        audioPlayer.volume = 1;
-
+    else{
+        audioPlayer.volume = val;
     }
+}
+
+function changeVolume(){
+    var muteVolume = document.getElementById('volumeImage');
+    if(!defaultVolume)
+        { muteVolume.src ='m.png';
+    defaultVolume = true;
+    audioPlayer.volume = 0;
+}
+else{ 
+    muteVolume.src = 'v.png';
+    defaultVolume = false;
+    audioPlayer.volume = 1;
+
+}
 }
 function changeCurrentSonf(valu){
     songSource.src = songs[valu];
@@ -299,32 +332,68 @@ function likeCounter() {
 function randomSongplay() {
     var valueSong = document.getElementById('random-image');
     if(randomClassimage === false)
-    {  valueSong.src = 'random2.png';
-       randomClassimage = true;
-     const  songvalue = Math.floor(Math.random()*songsName.length);
-     changeCurrentSonf(songvalue);
-    }
-    else{
-        valueSong.src = 'random1.png';
-        randomClassimage = false ;
-        pauseAudio();
-    }
+        {  valueSong.src = 'random2.png';
+    randomClassimage = true;
+    const  songvalue = Math.floor(Math.random()*songsName.length);
+    changeCurrentSonf(songvalue);
+}
+else{
+    valueSong.src = 'random1.png';
+    randomClassimage = false ;
+    pauseAudio();
 
 }
-// Corrected JavaScript code
+}
 
-nextImage.addEventListener('mouseover', () => {
-    nextImage.src = 'next1.png'; // Change src attribute on mouseover
-});
-nextImage.addEventListener('mouseout', () => {
-    nextImage.src = 'next.png'; // Change src attribute on mouseover
-});
-preImage.addEventListener('mouseover', () => {
-    preImage.src = 'pre1.png'; // Change src attribute on mouseover
-});
-preImage.addEventListener('mouseout', () => {
-    preImage.src = 'pre.png'; // Change src attribute on mouseover
-});
+function listChanger(valuelist){
+    scrollItemPoint.scrollLeft=valuelist;
+    var innervalue = scrollItemPoint.scrollLeft;
+    if(innervalue == 0){
+        PlayerHeadClassVar[0].classList.add('active');
+        PlayerHeadClassVar[1].classList.remove('active');
+        PlayerHeadClassVar[2].classList.remove('active');
+    }
+    else if(innervalue == 497){
+        PlayerHeadClassVar[1].classList.add('active');
+        PlayerHeadClassVar[0].classList.remove('active');
+        PlayerHeadClassVar[2].classList.remove('active');
+    }
+    else if(innervalue == 998){
+        PlayerHeadClassVar[2].classList.add('active');
+        PlayerHeadClassVar[1].classList.remove('active');
+        PlayerHeadClassVar[0].classList.remove('active');
+        
+    }
+    else{
+        alert("Kidding");
+    }
+}
+const PlayerHeadClassVar = document.getElementById('PlayerHeadClass').children;
+var heartChanger = document.getElementById('heartchange');
+var valueofHeart = false;
+function heartchangeFunction(){
+  if(valueofHeart == false)
+  {  heartChanger.src ="h2.png";
+     valueofHeart = true;
+        
+}
+else{
+    heartChanger.src ="h1.png";
+     valueofHeart = false;
+        
+
+}
+}
+function activeChanger(songI){
+   for(let i = 0;i>=0;i++)
+   { if(i == songI){songActiveVar[i].classList.add('active');}
+     else{
+        songActiveVar[i].classList.remove('active');
+     }
+
+
+   }
+}
 
 
 </script>
