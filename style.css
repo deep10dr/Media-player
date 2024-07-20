@@ -544,8 +544,6 @@ button:hover {
     flex-direction: row;
     gap: 50px;
     align-items: center;
-    background: transparent;
-    box-shadow: 0px 0px 4px 1px white;
     cursor: pointer;
 }
 
@@ -566,7 +564,6 @@ button:hover {
 }
 
 .player-list-items button h1 {
-    color: white;
     font-size: 20px; /* Adjusted font size */
 }
 
