@@ -5,7 +5,9 @@
 }
 
 body {
-     background: #3887BE;
+     background:url('bacground.jpg');
+     background-position: center;
+     background-size: cover;
     overflow-x: auto;
     margin: 0; /* Reset default margin */
     font-family: Arial, sans-serif; /* Set a default font */
@@ -17,18 +19,14 @@ body {
     flex-direction: row;
     align-items: center;
     padding: 20px;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin-top: 20px;
+    height: max-content;
+
 }
 
 .upper-class img {
     height: 40px;
-}
-
-.upper-class h1 {
-    color: white;
-    font-weight: 700;
-    text-transform: uppercase;
 }
 
 .upper-class div {
@@ -50,15 +48,15 @@ body {
 }
 
 .outer_class {
-    height: 500px;
+    height: 600px;
     width: 90%;
-    margin-left: 30px;
+    margin-left: 80px;
     margin-top: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    padding: 20px;
-    gap: 200px;
+    padding: 20px 20px 20px 20px;
+    justify-content: space-around;
 }
 
 .player {
@@ -86,21 +84,8 @@ body {
 }
 
 .img-clas .box-img {
-    height: 200px;
-    border-radius: 50%;
-    animation-name: play;
-    animation-duration: 60s;
-    animation-delay: 0s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes play {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+    height: 220px;
+    border-radius: 20px;
 }
 
 .play-range-class {
@@ -109,6 +94,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+gap: 10px;
 }
 
 #seekSlider {
@@ -166,7 +152,11 @@ body {
     transform: translateY(-7px);
     transition: 1s all;
 }
+#time_update_song_start,#time_update_song_end{
 
+font-size: 15px;
+font-weight: 400;
+}
 #seekSlider {
     -webkit-appearance: none;
     height: 6px;
@@ -335,13 +325,13 @@ button:hover {
 .player-list-items button:hover{
     transform: scale(1.04);
     transition: 0.8s transform;
-    box-shadow: 0px 0px 2px 1.3px #2eb3be;
+    box-shadow: 0px 0px 2px 1.3px #e19354;
     transition: 0.1s box-shadow;
 }
 .player-list-items button.active{
     transform: scale(1.06);
     transition: 0.8s transform;
-    box-shadow: 0px 0px 2px 1.3px #2eb3be;
+    box-shadow: 0px 0px 2px 1.3px #e19354;
     transition: 0.1s box-shadow;
 }
 
@@ -409,7 +399,7 @@ button:hover {
     display: none;
 } 
 .artist-class > button:hover{
-    box-shadow: 0px 0px 2px 1.3px #2eb3be;
+    box-shadow: 0px 0px 2px 1.3px #e19354;
     transform: scale(1.01);
 }
 .artist-class > button > img{
