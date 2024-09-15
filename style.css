@@ -8,9 +8,9 @@ body {
      background:url('bacground.jpg');
      background-position: center;
      background-size: cover;
-    overflow-x: auto;
-    margin: 0; /* Reset default margin */
-    font-family: Arial, sans-serif; /* Set a default font */
+      overflow-x: auto;
+     margin: 0; /* Reset default margin */
+     font-family: Arial, sans-serif; /* Set a default font */
 }
 
 .upper-class {
@@ -421,234 +421,201 @@ button:hover {
 
 }
 
-@media screen and (max-width: 600px) {
+
+
+@media screen and (max-width: 500px) {
     body {
         overflow-x: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
+
     .upper-class {
         height: 20px;
         padding: 10px;
         width: 100%;
         margin-top: 30px;
     }
+
     .upper-class h1 {
         font-weight: 300;
-        font-size: 20px;
+        font-size: 1.25rem;
         margin-bottom: 10px;
     }
+
     .upper-class div {
         width: 230px;
         height: 40px;
         padding: 8px 8px 20px 20px;
         margin-left: 36px;
     }
-    .upper-class div {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    flex-wrap: wrap;
-    align-items: center;
-    box-shadow: 0px 0px 4px 1px black;
-    border-radius: 20px;
-}
-    .upper-class img{
+
+    .upper-class img {
         margin-bottom: 10px;
         height: 30px;
     }
+
     .outer_class {
-        height: 200vh;
-        width: 500px;
-        margin-left: 10px;
-        margin-top: 8px;
+        height: 800px;
+        width: 390px;
         display: flex;
         flex-direction: column;
         padding: 20px;
         gap: 50px;
     }
+
     .player {
         height: 600px;
+        width: 360px;
     }
+
     .img-clas {
         height: 400px;
     }
+
     .img-clas .box-img {
         height: 200px;
     }
+
     .player-list {
-        width: 400px;
-        height: 600px;
+        width: 360px;
+        height: 500px;
         padding: 1px;
     }
+
     .player-list-items {
-        width: 96%;
+        width: 340px;
         padding: 4px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        overflow-y: auto;
     }
+
+    .player-list-items > button {
+        width: 90%;
+        display: flex;
+        gap: 8px;
+    }
+
+    .player-list-items > button > h1 {
+        font-size: 6px;
+    }
+
     .player-list button {
-        height: 50px;
+        height: 70px;
+        width: 94%;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        align-items: center;
+        cursor: pointer;
     }
+
     .player-list button img {
-        height: 20px;
+        height: 70px;
+        padding: 2px;
     }
+
+    .player-list button:hover {
+        transform: scale(1.04);
+    }
+
+    .player-list button.active {
+        transform: scale(1.06);
+        box-shadow: 0 0 2px 1.3px #2eb3be;
+    }
+
     .player-list button h1 {
-        font-size: 22px;
+        font-size: 1.25rem;
     }
+
+    .PlayListHead {
+        font-size: 20px;
+        border: none;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
     .PlayListHead:hover {
         border-bottom: 4px solid white;
         border-radius: 5px;
-        transition: 0.2s border-bottom;
     }
-    .player-list-items-container::-webkit-scrollbar{
-    display: none;
-}
-.player-list-items-container{
-    width: 460px;
-}
 
-.inner-player-list {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: nowrap;
-     width: fit-content;
-     padding: 5px;
-     gap: 100px;
-}
+    .player-list-items-container {
+        width: 350px;
+    }
 
-.player-list-items {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    overflow-y: auto; /* Changed to overflow-y for vertical scrolling */
-    padding: 20px 0px 20px 23px;
-    width: 420px;
-    margin-left: 12px;
-}
-.player-list-items::-webkit-scrollbar {
-  display: none;
-}
+    .inner-player-list {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        gap: 120px;
+        width: 100em;
+    }
 
-.player-list-items button {
-    height: 70px;
-    width:94%;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    align-items: center;
-    cursor: pointer;
-}
+    .PlayerHeadClass {
+        width: 340px;
+        justify-content: space-around;
+        padding: 10px;
+        gap: 5px;
+    }
 
-.player-list-items button img {
-    height: 70px;
-    padding: 2px;
-}
+    .PlayerHeadClass div {
+        width: 80px;
+    }
 
-.player-list-items button:hover{
-    transform: scale(1.04);
-    transition: 0.3s all;
-}
-.player-list-items button.active{
-    transform: scale(1.06);
-    transition: 0.8s transform;
-    box-shadow: 0px 0px 2px 1.3px #2eb3be;
-    transition: 0.1s box-shadow;
-}
+    #play-list-change {
+        width: 25px;
+        height: 25px;
+    }
+    .PlayerHeadClass div > h1:hover{
+        text-decoration: none;
+        border-bottom: none;
+    }
 
-.player-list-items button h1 {
-    font-size: 20px; /* Adjusted font size */
-}
+    .PlayerHeadClass div:hover {
+        border-bottom: 4px solid white;
+        transform: translateY(-2px);
+    }
 
-.PlayerHeadClass {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 400px;
-    justify-content: space-between;
-    justify-content: space-around;
-    padding: 10px;
-}
+    .artist-class {
+        height: 420px;
+        width: 380px;
+    }
 
-.PlayerHeadClass div {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    padding: 4px 4px 4px 4px;
-    cursor: pointer;
-    width: 100px;
-}
-.PlayListHead{
-    font-size: 24px;
-    border: none;
-    text-decoration: none;
-   font-weight: 600;
-}
-#play-list-change{
-height: 28px;
-}
+    .artist-class > button {
+        width: 94%;
+        height: 80px;
+        font-size: 1.25rem;
+    }
+    .PlayListHead{
+        text-decoration: none;
+    }
+    .artist-class > button:hover {
+        box-shadow: 0 0 2px 1.3px #2eb3be;
+    }
 
-.PlayerHeadClass div:hover{
-    border-bottom: 4px solid white;
-    transition: 0.3s barder-bottom;
-    transform: translateY(-2px);
-    transition: 0.4s transform;
-}
-.active{
-    border-bottom: 4px solid white;
-    transition: 0.3s barder-bottom;
-    transform: translateY(-2px);
-    transition: 0.4s transform;
-}
-.PlayerHeadClass div > h1:hover{
-    text-decoration: none;
-    border-bottom: none;
-}
+    .artist-class > button > img {
+        height: 50px;
+    }
 
-.artist-class{
-    display: flex;
-    flex-direction:column ;
-    gap: 10px;
-    overflow-y: auto;
-    height: 500px;
-    width: 380px;
-}
-.artist-class > button {
-  width: 94%;
-  height: 80px;
-  padding: 10px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 20px;
-  font-weight: 500;
+    #heartchange {
+        height: 34px;
+        border: none;
+        border-radius: 0;
+    }
 
-}
-.artist-class::-webkit-scrollbar{
-    display: none;
-} 
-.artist-class > button:hover{
-    box-shadow: 0px 0px 2px 1.3px #2eb3be;
-    transform: scale(1.01);
-}
-.artist-class > button > img{
-    height:50px;
-    border-radius: 20px;
-    &:hover{
-        transform: scale(1.04);
-        transition: 0.6s;
+    .album-class {
+        height: 420px;
+        width: 600px;
+        margin: 0 15px 0 100px;
+        border: 1px solid black;
     }
 }
-#heartchange{
-    height: 34px;
-    border: none;
-    border-radius: 0px;
-    right:10; }
-
-.album-class {
-    height: 500px;
-    width: 380px;
-    margin-left: 15px;
-    margin-right: 100px;
-
-}
-}
-
