@@ -312,7 +312,7 @@ button:hover {
     border-radius: 20px;
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 10px;
     align-items: center;
     cursor: pointer;
 }
@@ -420,9 +420,6 @@ button:hover {
     width: 460px;
 
 }
-
-
-
 @media screen and (max-width: 500px) {
     body {
         overflow-x: hidden;
@@ -498,13 +495,14 @@ button:hover {
     }
 
     .player-list-items > button {
-        width: 90%;
+        width: 86%;
         display: flex;
-        gap: 8px;
+        flex-direction: row;
+        gap: 10px;
     }
-
-    .player-list-items > button > h1 {
-        font-size: 6px;
+    .player-list-items button img {
+        height: 50px;
+        padding: 6px;
     }
 
     .player-list button {
@@ -528,12 +526,12 @@ button:hover {
     }
 
     .player-list button.active {
-        transform: scale(1.06);
+        transform: scale(1.05);
         box-shadow: 0 0 2px 1.3px #2eb3be;
     }
 
     .player-list button h1 {
-        font-size: 1.25rem;
+        font-size: 15px;
     }
 
     .PlayListHead {
@@ -616,6 +614,13 @@ button:hover {
         height: 420px;
         width: 600px;
         margin: 0 15px 0 100px;
+    }
+    .outer_class{
         border: 1px solid black;
+        width: max-content;
+        margin-right: 30px;
+        margin-left: 10px;
     }
 }
+
+
