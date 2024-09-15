@@ -616,7 +616,6 @@ button:hover {
         margin: 0 15px 0 100px;
     }
     .outer_class{
-        border: 1px solid black;
         width: max-content;
         margin-right: 30px;
         margin-left: 10px;
