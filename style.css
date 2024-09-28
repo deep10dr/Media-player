@@ -308,13 +308,14 @@ button:hover {
 
 .player-list-items button {
     height: 70px;
-    width:94%;
+    width:88%;
     border-radius: 20px;
     display: flex;
     flex-direction: row;
     gap: 10px;
     align-items: center;
     cursor: pointer;
+    /* flex-wrap: wrap; */
 }
 
 .player-list-items button img {
@@ -361,7 +362,7 @@ button:hover {
     border-bottom: 2px solid white;
     transition: 0.3s barder-bottom;
     transform: translateY(-2px);
-    transition: 0.4s transform;
+    transition: 0.4s transition;
 }
 
 
@@ -495,14 +496,15 @@ button:hover {
     }
 
     .player-list-items > button {
-        width: 86%;
+        width: max-content;
         display: flex;
         flex-direction: row;
-        gap: 10px;
+     gap: 4px !important
+     ;
     }
     .player-list-items button img {
         height: 50px;
-        padding: 6px;
+        padding: 4px;
     }
 
     .player-list button {
@@ -532,6 +534,7 @@ button:hover {
 
     .player-list button h1 {
         font-size: 15px;
+        font-family: 'Montserrat', sans-serif;
     }
 
     .PlayListHead {
@@ -622,4 +625,51 @@ button:hover {
     }
 }
 
+.swal2-popup {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: black;
+    padding: 20px; /* Change from auto to a fixed value */
+    width: 400px;
+    height: 450px;
+}
 
+.swal2-popup:hover {
+    box-shadow: 0px 0px 4px 0.3px white, 0px 0px 4px white;
+    transition: 0.5s all ease-in;
+}
+
+.swal2-button {
+    border: none;
+    box-shadow: none;
+}
+
+.swal2-button:hover {
+    border: none;
+}
+
+.swal2-input {
+    border-radius: 10px;
+}
+
+.swal2-input:hover {
+    box-shadow: 0px 0px 4px 0.3px white, 0px 0px 4px 0.3px white;
+}
+
+.swal_2 {
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.swal_else_2 {
+    height: 50px !important;
+    width: 50px !important;
+}
+.pop_up {
+    height: 100px;
+
+}
